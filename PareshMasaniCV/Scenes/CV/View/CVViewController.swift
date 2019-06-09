@@ -26,7 +26,7 @@ final class CVViewController: UIViewController, StoryboardIdentifiable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableHeaderView = headerView
+        setupTableView()
         setupBindings()
         viewModel.getCV()
     }
@@ -44,11 +44,13 @@ private extension CVViewController {
         viewModel.apiError.subscribe(onNext: { [weak self] _ in
             self?.showError()
         }).disposed(by: disposeBag)
+        
+        viewModel.isLoading.bind(to: rx.showsActivityView)
+            .disposed(by: disposeBag)
     }
     
     func setupContactInfoBindings() {
         // only enable bar button items if the contact info exists
-        
         viewModel.contactInfo
             .map { $0 != nil }
             .bind(to: phoneButtonItem.rx.isEnabled)
@@ -81,9 +83,15 @@ private extension CVViewController {
     }
     
     func setupTableViewBindings() {
-        let dataSource = RxTableViewSectionedReloadDataSource<CVSectionModel>.init(configureCell: { (_, _, _, cellModelType) -> UITableViewCell in
-            // TODO: retain cycle?
-            return self.dequeueCell(forType: cellModelType)
+        tableView.refreshControl?.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { [weak self] _ in
+                self?.tableView.refreshControl?.endRefreshing()
+                self?.viewModel.getCV()
+            })
+            .disposed(by: disposeBag)
+        
+        let dataSource = RxTableViewSectionedReloadDataSource<CVSectionModel>.init(configureCell: { (_, tableView, _, cellModelType) -> UITableViewCell in
+            return tableView.dequeueCell(forType: cellModelType)
         }, titleForHeaderInSection: { (dataSource, index) -> String? in
             return dataSource.sectionModels[index].headerTitle?.uppercased()
         })
@@ -97,6 +105,11 @@ private extension CVViewController {
 // MARK: - Helpers
 // -------------------------------------
 private extension CVViewController {
+    func setupTableView() {
+        tableView.tableHeaderView = headerView
+        tableView.refreshControl = UIRefreshControl()
+    }
+    
     func showError() {
         let alert = UIAlertController(title: Strings.Error.title, message: Strings.Error.message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: Strings.Error.buttonTitle, style: .default, handler: nil))
@@ -119,6 +132,29 @@ private extension CVViewController {
             return cell
         case .education(let education):
             let cell = tableView.dequeueReusableCell(className: CVEducationTableViewCell.self)
+            cell.populate(withModel: education)
+            return cell
+        }
+    }
+}
+
+private extension UITableView {
+    func dequeueCell(forType type: CVCellModelType) -> UITableViewCell {
+        switch type {
+        case .summary(let summary):
+            let cell = dequeueReusableCell(className: CVSummaryTableViewCell.self)
+            cell.summary = summary
+            return cell
+        case .skill(let title, let skills):
+            let cell = dequeueReusableCell(className: CVSkillTableViewCell.self)
+            cell.populate(withTitle: title, skills: skills)
+            return cell
+        case .company(let company):
+            let cell = dequeueReusableCell(className: CVCompanyTableViewCell.self)
+            cell.populate(withModel: company)
+            return cell
+        case .education(let education):
+            let cell = dequeueReusableCell(className: CVEducationTableViewCell.self)
             cell.populate(withModel: education)
             return cell
         }

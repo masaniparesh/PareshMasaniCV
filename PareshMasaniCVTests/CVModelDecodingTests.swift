@@ -21,7 +21,7 @@ class CVModelDecodingTests: QuickSpec {
             jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
             
             context("when decoded from correct JSON") {
-                let jsonData = self.dataFromJSON(withName: "correct_cv")!
+                let jsonData = dataFromJSON(withName: "correct_cv")!
                 it("should be decoded correctly") {
                     do {
                         let model = try jsonDecoder.decode(CVModel.self, from: jsonData)
@@ -32,7 +32,7 @@ class CVModelDecodingTests: QuickSpec {
                 }
             }
             context("when decoded from incorrect JSON") {
-                let jsonData = self.dataFromJSON(withName: "incorrect_cv")!
+                let jsonData = dataFromJSON(withName: "incorrect_cv")!
                 it("should throw error") {
                     expect { try jsonDecoder.decode(CVModel.self, from: jsonData) }.to(throwError())
                 }
@@ -87,12 +87,5 @@ private extension CVModelDecodingTests {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM yyyy"
         return dateFormatter.string(from: date)
-    }
-    
-    func dataFromJSON(withName name: String) -> Data? {
-        guard let fileURL = Bundle(for: CVModelDecodingTests.self).url(forResource: name, withExtension: "json") else {
-            return nil
-        }
-        return try? Data(contentsOf: fileURL)
     }
 }

@@ -30,6 +30,11 @@
 		8E751A2622AA6BF800CD150C /* CVTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2522AA6BF800CD150C /* CVTableViewCells.swift */; };
 		8E751A2A22AA6D3500CD150C /* CVTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2922AA6D3500CD150C /* CVTableHeaderView.swift */; };
 		8E751A2C22AAD21C00CD150C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2B22AAD21C00CD150C /* UITableView+Reusable.swift */; };
+		8E751A2E22AADDAC00CD150C /* UIViewController+ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2D22AADDAC00CD150C /* UIViewController+ActivityView.swift */; };
+		8E751A3122AADE3A00CD150C /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A3022AADE3A00CD150C /* LoadingViewController.swift */; };
+		8E751A3322AAE40A00CD150C /* CVSectionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A3222AAE40A00CD150C /* CVSectionsBuilder.swift */; };
+		8E751A3522AAE5B300CD150C /* CVViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A3422AAE5B300CD150C /* CVViewModelTests.swift */; };
+		8E751A3822AAE74300CD150C /* DataFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A3722AAE74300CD150C /* DataFromJSON.swift */; };
 		8E8A92EA22A9161600F22D93 /* incorrect_cv.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A92E922A9161600F22D93 /* incorrect_cv.json */; };
 		8E8A92EC22A9213C00F22D93 /* CVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92EB22A9213C00F22D93 /* CVService.swift */; };
 		8E8A92EE22A921D600F22D93 /* APIRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */; };
@@ -79,6 +84,11 @@
 		8E751A2522AA6BF800CD150C /* CVTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCells.swift; sourceTree = "<group>"; };
 		8E751A2922AA6D3500CD150C /* CVTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableHeaderView.swift; sourceTree = "<group>"; };
 		8E751A2B22AAD21C00CD150C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		8E751A2D22AADDAC00CD150C /* UIViewController+ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityView.swift"; sourceTree = "<group>"; };
+		8E751A3022AADE3A00CD150C /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		8E751A3222AAE40A00CD150C /* CVSectionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSectionsBuilder.swift; sourceTree = "<group>"; };
+		8E751A3422AAE5B300CD150C /* CVViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewModelTests.swift; sourceTree = "<group>"; };
+		8E751A3722AAE74300CD150C /* DataFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromJSON.swift; sourceTree = "<group>"; };
 		8E8A92E922A9161600F22D93 /* incorrect_cv.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = incorrect_cv.json; sourceTree = "<group>"; };
 		8E8A92EB22A9213C00F22D93 /* CVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVService.swift; sourceTree = "<group>"; };
 		8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestRetrier.swift; sourceTree = "<group>"; };
@@ -186,7 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				8E3CA86522A8F457002A69F9 /* Resources */,
+				8E751A3622AAE72F00CD150C /* Helpers */,
 				8E3CA86322A8F3E5002A69F9 /* CVModelDecodingTests.swift */,
+				8E751A3422AAE5B300CD150C /* CVViewModelTests.swift */,
 				8E3CA85D22A8F3CF002A69F9 /* Info.plist */,
 			);
 			path = PareshMasaniCVTests;
@@ -243,6 +255,7 @@
 			children = (
 				8E751A1422A9CAAA00CD150C /* CVViewModel.swift */,
 				8E751A2122AA352900CD150C /* CVSectionModel.swift */,
+				8E751A3222AAE40A00CD150C /* CVSectionsBuilder.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -258,6 +271,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8E751A2F22AADE2500CD150C /* LoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A3022AADE3A00CD150C /* LoadingViewController.swift */,
+				8E751A2D22AADDAC00CD150C /* UIViewController+ActivityView.swift */,
+			);
+			path = LoadingIndicator;
+			sourceTree = "<group>";
+		};
+		8E751A3622AAE72F00CD150C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A3722AAE74300CD150C /* DataFromJSON.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8E8A92EF22A923E000F22D93 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +297,7 @@
 				8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */,
 				8E751A2322AA398A00CD150C /* UIApplication+Utils.swift */,
 				8E751A2B22AAD21C00CD150C /* UITableView+Reusable.swift */,
+				8E751A2F22AADE2500CD150C /* LoadingIndicator */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -461,6 +492,7 @@
 			files = (
 				8E751A2422AA398A00CD150C /* UIApplication+Utils.swift in Sources */,
 				8E751A1322A9CAA200CD150C /* CVViewController.swift in Sources */,
+				8E751A3322AAE40A00CD150C /* CVSectionsBuilder.swift in Sources */,
 				8E751A2622AA6BF800CD150C /* CVTableViewCells.swift in Sources */,
 				8E751A0B22A9C59C00CD150C /* FileStorage.swift in Sources */,
 				8E751A2022A9E2D400CD150C /* Strings.swift in Sources */,
@@ -470,7 +502,9 @@
 				8E8A92F122A923F000F22D93 /* Require.swift in Sources */,
 				8E751A0D22A9C63500CD150C /* JSONDecoder+Helpers.swift in Sources */,
 				8E3CA84022A8EF6E002A69F9 /* AppDelegate.swift in Sources */,
+				8E751A2E22AADDAC00CD150C /* UIViewController+ActivityView.swift in Sources */,
 				8E751A1522A9CAAA00CD150C /* CVViewModel.swift in Sources */,
+				8E751A3122AADE3A00CD150C /* LoadingViewController.swift in Sources */,
 				8E751A1D22A9CD9300CD150C /* UIStoryboard+Helpers.swift in Sources */,
 				8E751A2C22AAD21C00CD150C /* UITableView+Reusable.swift in Sources */,
 				8E751A1922A9CAB900CD150C /* Router.swift in Sources */,
@@ -488,6 +522,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E3CA86422A8F3E5002A69F9 /* CVModelDecodingTests.swift in Sources */,
+				8E751A3822AAE74300CD150C /* DataFromJSON.swift in Sources */,
+				8E751A3522AAE5B300CD150C /* CVViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
