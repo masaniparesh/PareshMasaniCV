@@ -9,5 +9,10 @@ target 'PareshMasaniCV' do
   pod 'RxSwift', '5.0.0'
   pod 'RxCocoa', '5.0.0'
   pod 'Alamofire', '4.8.2'
+  
+  target 'PareshMasaniCVTests' do
+      pod 'Nimble', '8.0.1'
+      pod 'Quick', '2.1.0'
+  end
 
 end

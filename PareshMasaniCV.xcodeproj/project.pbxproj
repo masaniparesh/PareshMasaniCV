@@ -8,23 +8,71 @@
 
 /* Begin PBXBuildFile section */
 		8E3CA84022A8EF6E002A69F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA83F22A8EF6E002A69F9 /* AppDelegate.swift */; };
-		8E3CA84222A8EF6E002A69F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA84122A8EF6E002A69F9 /* ViewController.swift */; };
-		8E3CA84522A8EF6E002A69F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA84322A8EF6E002A69F9 /* Main.storyboard */; };
+		8E3CA84522A8EF6E002A69F9 /* CV.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA84322A8EF6E002A69F9 /* CV.storyboard */; };
 		8E3CA84722A8EF70002A69F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA84622A8EF70002A69F9 /* Assets.xcassets */; };
 		8E3CA84A22A8EF70002A69F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA84822A8EF70002A69F9 /* LaunchScreen.storyboard */; };
+		8E3CA85422A8EFE0002A69F9 /* CVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA85322A8EFE0002A69F9 /* CVModel.swift */; };
+		8E3CA86422A8F3E5002A69F9 /* CVModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA86322A8F3E5002A69F9 /* CVModelDecodingTests.swift */; };
+		8E3CA86722A8F46C002A69F9 /* correct_cv.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA86622A8F46C002A69F9 /* correct_cv.json */; };
+		8E751A0922A9C58800CD150C /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A0822A9C58800CD150C /* StorageProtocol.swift */; };
+		8E751A0B22A9C59C00CD150C /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A0A22A9C59C00CD150C /* FileStorage.swift */; };
+		8E751A0D22A9C63500CD150C /* JSONDecoder+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A0C22A9C63500CD150C /* JSONDecoder+Helpers.swift */; };
+		8E751A0F22A9C7FA00CD150C /* SessionManager+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A0E22A9C7FA00CD150C /* SessionManager+Observable.swift */; };
+		8E751A1322A9CAA200CD150C /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1222A9CAA200CD150C /* CVViewController.swift */; };
+		8E751A1522A9CAAA00CD150C /* CVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1422A9CAAA00CD150C /* CVViewModel.swift */; };
+		8E751A1722A9CAB300CD150C /* SceneAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1622A9CAB300CD150C /* SceneAssembly.swift */; };
+		8E751A1922A9CAB900CD150C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1822A9CAB900CD150C /* Router.swift */; };
+		8E751A1B22A9CD8200CD150C /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1A22A9CD8200CD150C /* StoryboardIdentifiable.swift */; };
+		8E751A1D22A9CD9300CD150C /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */; };
+		8E8A92EA22A9161600F22D93 /* incorrect_cv.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A92E922A9161600F22D93 /* incorrect_cv.json */; };
+		8E8A92EC22A9213C00F22D93 /* CVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92EB22A9213C00F22D93 /* CVService.swift */; };
+		8E8A92EE22A921D600F22D93 /* APIRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */; };
+		8E8A92F122A923F000F22D93 /* Require.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92F022A923F000F22D93 /* Require.swift */; };
+		DF18D37A9804D99B69D7AF4B /* Pods_PareshMasaniCV_PareshMasaniCVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA6F672472C44FFE55A82D6 /* Pods_PareshMasaniCV_PareshMasaniCVTests.framework */; };
 		F792B4E87FA79BE1CEB58BAE /* Pods_PareshMasaniCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209F78206D698CC9EA3F75D5 /* Pods_PareshMasaniCV.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E3CA85E22A8F3CF002A69F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E3CA83422A8EF6E002A69F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E3CA83B22A8EF6E002A69F9;
+			remoteInfo = PareshMasaniCV;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		209F78206D698CC9EA3F75D5 /* Pods_PareshMasaniCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PareshMasaniCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E337D26AFE52AEE14270ABF /* Pods-PareshMasaniCV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PareshMasaniCV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PareshMasaniCV/Pods-PareshMasaniCV.release.xcconfig"; sourceTree = "<group>"; };
+		745027C6F04F18C7E7DDA60E /* Pods-PareshMasaniCV-PareshMasaniCVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PareshMasaniCV-PareshMasaniCVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PareshMasaniCV-PareshMasaniCVTests/Pods-PareshMasaniCV-PareshMasaniCVTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E3CA83C22A8EF6E002A69F9 /* PareshMasaniCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PareshMasaniCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3CA83F22A8EF6E002A69F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E3CA84122A8EF6E002A69F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E3CA84422A8EF6E002A69F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E3CA84422A8EF6E002A69F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CV.storyboard; sourceTree = "<group>"; };
 		8E3CA84622A8EF70002A69F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E3CA84922A8EF70002A69F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E3CA84B22A8EF70002A69F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3CA85322A8EFE0002A69F9 /* CVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVModel.swift; sourceTree = "<group>"; };
+		8E3CA85922A8F3CF002A69F9 /* PareshMasaniCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PareshMasaniCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3CA85D22A8F3CF002A69F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3CA86322A8F3E5002A69F9 /* CVModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVModelDecodingTests.swift; sourceTree = "<group>"; };
+		8E3CA86622A8F46C002A69F9 /* correct_cv.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = correct_cv.json; sourceTree = "<group>"; };
+		8E751A0822A9C58800CD150C /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		8E751A0A22A9C59C00CD150C /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		8E751A0C22A9C63500CD150C /* JSONDecoder+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Helpers.swift"; sourceTree = "<group>"; };
+		8E751A0E22A9C7FA00CD150C /* SessionManager+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionManager+Observable.swift"; sourceTree = "<group>"; };
+		8E751A1222A9CAA200CD150C /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
+		8E751A1422A9CAAA00CD150C /* CVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewModel.swift; sourceTree = "<group>"; };
+		8E751A1622A9CAB300CD150C /* SceneAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAssembly.swift; sourceTree = "<group>"; };
+		8E751A1822A9CAB900CD150C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8E751A1A22A9CD8200CD150C /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Helpers.swift"; sourceTree = "<group>"; };
+		8E8A92E922A9161600F22D93 /* incorrect_cv.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = incorrect_cv.json; sourceTree = "<group>"; };
+		8E8A92EB22A9213C00F22D93 /* CVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVService.swift; sourceTree = "<group>"; };
+		8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestRetrier.swift; sourceTree = "<group>"; };
+		8E8A92F022A923F000F22D93 /* Require.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Require.swift; sourceTree = "<group>"; };
+		BEA6F672472C44FFE55A82D6 /* Pods_PareshMasaniCV_PareshMasaniCVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PareshMasaniCV_PareshMasaniCVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6CCD060EA4A5B831458EF20 /* Pods-PareshMasaniCV-PareshMasaniCVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PareshMasaniCV-PareshMasaniCVTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PareshMasaniCV-PareshMasaniCVTests/Pods-PareshMasaniCV-PareshMasaniCVTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8DC0417914B5FBEA38EF75C /* Pods-PareshMasaniCV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PareshMasaniCV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PareshMasaniCV/Pods-PareshMasaniCV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +85,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E3CA85622A8F3CF002A69F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF18D37A9804D99B69D7AF4B /* Pods_PareshMasaniCV_PareshMasaniCVTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				209F78206D698CC9EA3F75D5 /* Pods_PareshMasaniCV.framework */,
+				BEA6F672472C44FFE55A82D6 /* Pods_PareshMasaniCV_PareshMasaniCVTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -53,6 +110,8 @@
 			children = (
 				E8DC0417914B5FBEA38EF75C /* Pods-PareshMasaniCV.debug.xcconfig */,
 				2E337D26AFE52AEE14270ABF /* Pods-PareshMasaniCV.release.xcconfig */,
+				745027C6F04F18C7E7DDA60E /* Pods-PareshMasaniCV-PareshMasaniCVTests.debug.xcconfig */,
+				D6CCD060EA4A5B831458EF20 /* Pods-PareshMasaniCV-PareshMasaniCVTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -61,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8E3CA83E22A8EF6E002A69F9 /* PareshMasaniCV */,
+				8E3CA85A22A8F3CF002A69F9 /* PareshMasaniCVTests */,
 				8E3CA83D22A8EF6E002A69F9 /* Products */,
 				6422EF71E437E46B29CB1103 /* Pods */,
 				0F728CBBCDDB5E47D1F9D40E /* Frameworks */,
@@ -71,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8E3CA83C22A8EF6E002A69F9 /* PareshMasaniCV.app */,
+				8E3CA85922A8F3CF002A69F9 /* PareshMasaniCVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,13 +140,101 @@
 			isa = PBXGroup;
 			children = (
 				8E3CA83F22A8EF6E002A69F9 /* AppDelegate.swift */,
-				8E3CA84122A8EF6E002A69F9 /* ViewController.swift */,
-				8E3CA84322A8EF6E002A69F9 /* Main.storyboard */,
-				8E3CA84622A8EF70002A69F9 /* Assets.xcassets */,
-				8E3CA84822A8EF70002A69F9 /* LaunchScreen.storyboard */,
 				8E3CA84B22A8EF70002A69F9 /* Info.plist */,
+				8E3CA85222A8EFCF002A69F9 /* Model */,
+				8E3CA85122A8EFC4002A69F9 /* Networking */,
+				8E751A0522A9B9F900CD150C /* Persistence */,
+				8E751A1022A9CA7E00CD150C /* Scenes */,
+				8E8A92EF22A923E000F22D93 /* Helpers */,
+				8E751A1E22A9CDCC00CD150C /* Resources */,
 			);
 			path = PareshMasaniCV;
+			sourceTree = "<group>";
+		};
+		8E3CA85122A8EFC4002A69F9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8E8A92EB22A9213C00F22D93 /* CVService.swift */,
+				8E751A0E22A9C7FA00CD150C /* SessionManager+Observable.swift */,
+				8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8E3CA85222A8EFCF002A69F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E3CA85322A8EFE0002A69F9 /* CVModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E3CA85A22A8F3CF002A69F9 /* PareshMasaniCVTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E3CA86522A8F457002A69F9 /* Resources */,
+				8E3CA86322A8F3E5002A69F9 /* CVModelDecodingTests.swift */,
+				8E3CA85D22A8F3CF002A69F9 /* Info.plist */,
+			);
+			path = PareshMasaniCVTests;
+			sourceTree = "<group>";
+		};
+		8E3CA86522A8F457002A69F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E3CA86622A8F46C002A69F9 /* correct_cv.json */,
+				8E8A92E922A9161600F22D93 /* incorrect_cv.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E751A0522A9B9F900CD150C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A0822A9C58800CD150C /* StorageProtocol.swift */,
+				8E751A0A22A9C59C00CD150C /* FileStorage.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		8E751A1022A9CA7E00CD150C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A1122A9CA9400CD150C /* CV */,
+				8E751A1622A9CAB300CD150C /* SceneAssembly.swift */,
+				8E751A1822A9CAB900CD150C /* Router.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8E751A1122A9CA9400CD150C /* CV */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A1222A9CAA200CD150C /* CVViewController.swift */,
+				8E751A1422A9CAAA00CD150C /* CVViewModel.swift */,
+				8E3CA84322A8EF6E002A69F9 /* CV.storyboard */,
+			);
+			path = CV;
+			sourceTree = "<group>";
+		};
+		8E751A1E22A9CDCC00CD150C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E3CA84622A8EF70002A69F9 /* Assets.xcassets */,
+				8E3CA84822A8EF70002A69F9 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E8A92EF22A923E000F22D93 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E8A92F022A923F000F22D93 /* Require.swift */,
+				8E751A0C22A9C63500CD150C /* JSONDecoder+Helpers.swift */,
+				8E751A1A22A9CD8200CD150C /* StoryboardIdentifiable.swift */,
+				8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +259,26 @@
 			productReference = 8E3CA83C22A8EF6E002A69F9 /* PareshMasaniCV.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8E3CA85822A8F3CF002A69F9 /* PareshMasaniCVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E3CA86022A8F3D0002A69F9 /* Build configuration list for PBXNativeTarget "PareshMasaniCVTests" */;
+			buildPhases = (
+				F915EBE3FF80C082E49487CE /* [CP] Check Pods Manifest.lock */,
+				8E3CA85522A8F3CF002A69F9 /* Sources */,
+				8E3CA85622A8F3CF002A69F9 /* Frameworks */,
+				8E3CA85722A8F3CF002A69F9 /* Resources */,
+				63068EB6421B2140B48EAF91 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E3CA85F22A8F3CF002A69F9 /* PBXTargetDependency */,
+			);
+			name = PareshMasaniCVTests;
+			productName = PareshMasaniCVTests;
+			productReference = 8E3CA85922A8F3CF002A69F9 /* PareshMasaniCVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +291,10 @@
 				TargetAttributes = {
 					8E3CA83B22A8EF6E002A69F9 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					8E3CA85822A8F3CF002A69F9 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 8E3CA83B22A8EF6E002A69F9;
 					};
 				};
 			};
@@ -139,6 +312,7 @@
 			projectRoot = "";
 			targets = (
 				8E3CA83B22A8EF6E002A69F9 /* PareshMasaniCV */,
+				8E3CA85822A8F3CF002A69F9 /* PareshMasaniCVTests */,
 			);
 		};
 /* End PBXProject section */
@@ -150,7 +324,16 @@
 			files = (
 				8E3CA84A22A8EF70002A69F9 /* LaunchScreen.storyboard in Resources */,
 				8E3CA84722A8EF70002A69F9 /* Assets.xcassets in Resources */,
-				8E3CA84522A8EF6E002A69F9 /* Main.storyboard in Resources */,
+				8E3CA84522A8EF6E002A69F9 /* CV.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3CA85722A8F3CF002A69F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E8A92EA22A9161600F22D93 /* incorrect_cv.json in Resources */,
+				8E3CA86722A8F46C002A69F9 /* correct_cv.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +362,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		63068EB6421B2140B48EAF91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PareshMasaniCV-PareshMasaniCVTests/Pods-PareshMasaniCV-PareshMasaniCVTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PareshMasaniCV-PareshMasaniCVTests/Pods-PareshMasaniCV-PareshMasaniCVTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PareshMasaniCV-PareshMasaniCVTests/Pods-PareshMasaniCV-PareshMasaniCVTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B4CD003BE3E791EDDA25F1C1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +396,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PareshMasaniCV/Pods-PareshMasaniCV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F915EBE3FF80C082E49487CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PareshMasaniCV-PareshMasaniCVTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -203,20 +425,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3CA84222A8EF6E002A69F9 /* ViewController.swift in Sources */,
+				8E751A1322A9CAA200CD150C /* CVViewController.swift in Sources */,
+				8E751A0B22A9C59C00CD150C /* FileStorage.swift in Sources */,
+				8E751A0F22A9C7FA00CD150C /* SessionManager+Observable.swift in Sources */,
+				8E8A92EE22A921D600F22D93 /* APIRequestRetrier.swift in Sources */,
+				8E3CA85422A8EFE0002A69F9 /* CVModel.swift in Sources */,
+				8E8A92F122A923F000F22D93 /* Require.swift in Sources */,
+				8E751A0D22A9C63500CD150C /* JSONDecoder+Helpers.swift in Sources */,
 				8E3CA84022A8EF6E002A69F9 /* AppDelegate.swift in Sources */,
+				8E751A1522A9CAAA00CD150C /* CVViewModel.swift in Sources */,
+				8E751A1D22A9CD9300CD150C /* UIStoryboard+Helpers.swift in Sources */,
+				8E751A1922A9CAB900CD150C /* Router.swift in Sources */,
+				8E751A0922A9C58800CD150C /* StorageProtocol.swift in Sources */,
+				8E8A92EC22A9213C00F22D93 /* CVService.swift in Sources */,
+				8E751A1722A9CAB300CD150C /* SceneAssembly.swift in Sources */,
+				8E751A1B22A9CD8200CD150C /* StoryboardIdentifiable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3CA85522A8F3CF002A69F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3CA86422A8F3E5002A69F9 /* CVModelDecodingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8E3CA85F22A8F3CF002A69F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E3CA83B22A8EF6E002A69F9 /* PareshMasaniCV */;
+			targetProxy = 8E3CA85E22A8F3CF002A69F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		8E3CA84322A8EF6E002A69F9 /* Main.storyboard */ = {
+		8E3CA84322A8EF6E002A69F9 /* CV.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8E3CA84422A8EF6E002A69F9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = CV.storyboard;
 			sourceTree = "<group>";
 		};
 		8E3CA84822A8EF70002A69F9 /* LaunchScreen.storyboard */ = {
@@ -382,6 +633,46 @@
 			};
 			name = Release;
 		};
+		8E3CA86122A8F3D0002A69F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745027C6F04F18C7E7DDA60E /* Pods-PareshMasaniCV-PareshMasaniCVTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PareshMasaniCVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paresh.PareshMasaniCVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PareshMasaniCV.app/PareshMasaniCV";
+			};
+			name = Debug;
+		};
+		8E3CA86222A8F3D0002A69F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6CCD060EA4A5B831458EF20 /* Pods-PareshMasaniCV-PareshMasaniCVTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PareshMasaniCVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paresh.PareshMasaniCVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PareshMasaniCV.app/PareshMasaniCV";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +690,15 @@
 			buildConfigurations = (
 				8E3CA84F22A8EF70002A69F9 /* Debug */,
 				8E3CA85022A8EF70002A69F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E3CA86022A8F3D0002A69F9 /* Build configuration list for PBXNativeTarget "PareshMasaniCVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3CA86122A8F3D0002A69F9 /* Debug */,
+				8E3CA86222A8F3D0002A69F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

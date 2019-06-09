@@ -1,0 +1,58 @@
+{
+    "name": "Paresh Masani",
+    "summary": "I am a passionate, dedicated, enthusiast, and inventive technology geek!",
+    "contact_info": {
+        "address": {
+            "readable_name": "14 Elthorne Road, London, NW9 8BJ",
+            "latitude": 51.5775298,
+            "longitude": -0.2614758
+        },
+        "phone": "07411621887",
+        "email": "paresh.masani@gmail.com"
+    },
+    "skills": {
+        "area_of_expertise": [
+            "iOS Development",
+            "Communication",
+            "Agile Methodologies"
+        ],
+        "tools_and_technologies": [
+            "Swift",
+            "Objective-C",
+            "ReactiveSwift / RxSwift",
+            "Java"
+        ],
+        "other": [
+            "Enterprise Development",
+            "Cloud Platforms"
+        ]
+    },
+    "work_experience": [
+        {
+            "company_name": "JPMorgan Chase & Co.",
+            "company_logo": "https://logoeps.com/wp-content/uploads/2012/05/jpmorgan-chase-logo-vector-01.png",
+            "start_date": "Dec 2018",
+            "end_date": "Apr 2019",
+            "role": "iOS Contractor",
+            "accomplishments": [
+                "Developed enterprise App JPMorgan Chase Loan App",
+                "Co-developed JPMorgan Chase Pay iOS App"
+            ]
+        },
+        {
+            "company_name": "Hi Mum! Said Dad",
+            "start_date": "Aug 2018",
+            "end_date": "Oct 2018",
+            "role": "iOS Contractor"
+        }
+    ],
+    "education": [
+        {
+            "specialty": "Master of Technology, Computer Science ",
+            "start_year": 2005,
+            "end_year": 2007,
+            "achievements": "Gold Medalist",
+            "school_name": "National Institute of Technology, Tiruchirappalli, India"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Paresh Masani",
+    "contact_info": {
+        "address": {
+            "readable_name": "14 Elthorne Road, London, NW9 8BJ",
+            "latitude": 51.5775298,
+            "longitude": -0.2614758
+        },
+        "phone": "07411621887",
+        "email": "paresh.masani@gmail.com"
+    },
+    "skills": {
+        "area_of_expertise": [
+            "iOS Development",
+            "Communication",
+            "Agile Methodologies"
+        ],
+        "tools_and_technologies": [
+            "Swift",
+            "Objective-C",
+            "ReactiveSwift / RxSwift",
+            "Java"
+        ],
+        "other": [
+            "Enterprise Development",
+            "Cloud Platforms"
+        ]
+    }
+}
