@@ -8,7 +8,9 @@ target 'PareshMasaniCV' do
   # Pods for PareshMasaniCV
   pod 'RxSwift', '5.0.0'
   pod 'RxCocoa', '5.0.0'
+  pod 'RxDataSources', '4.0.1'
   pod 'Alamofire', '4.8.2'
+  pod 'AlamofireImage', '3.5.2'
   
   target 'PareshMasaniCVTests' do
       pod 'Nimble', '8.0.1'

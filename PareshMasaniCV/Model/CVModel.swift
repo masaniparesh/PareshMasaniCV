@@ -11,6 +11,7 @@ import Foundation
 struct CVModel: Decodable {
     private enum CodingKeys: String, CodingKey {
         case name
+        case title
         case summary
         case contactInfo = "contact_info"
         case skills
@@ -18,6 +19,7 @@ struct CVModel: Decodable {
         case education
     }
     let name: String
+    let title: String
     let summary: String
     let contactInfo: ContactInfo
     let skills: Skills

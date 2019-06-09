@@ -21,7 +21,10 @@ struct SceneAssembly {
         switch scene {
         case .cv:
             let viewController = UIStoryboard.storyboard(.cv).instantiateViewController() as CVViewController
-            viewController.viewModel = CVViewModel()
+            let service = CVService()
+            let storage = FileStorage(baseDirectory: .documentDirectory, directoryName: "CV")
+            let viewModel = CVViewModel(service: service, storage: storage)
+            viewController.viewModel = viewModel
             return viewController
         }
     }

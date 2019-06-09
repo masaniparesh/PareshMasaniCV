@@ -45,7 +45,7 @@ private extension FileStorage {
             throw StorageError.emptyKey
         }
         let directoryPath = try createDirectoryPath()
-        let filePath = "\(directoryPath)\(key.hashValue)"
+        let filePath = "\(directoryPath)/\(key)"
         guard let encodedFilePath = filePath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             throw StorageError.invalidKey
         }
@@ -54,6 +54,10 @@ private extension FileStorage {
     
     func createDirectoryPath() throws -> String {
         let url = try fileManager.url(for: baseDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let path = url.appendingPathComponent(directoryName, isDirectory: true).path
+        if !fileManager.fileExists(atPath: path) {
+            try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+        }
         return url.appendingPathComponent(directoryName, isDirectory: true).path
     }
 }

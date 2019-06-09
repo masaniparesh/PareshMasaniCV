@@ -24,6 +24,12 @@
 		8E751A1922A9CAB900CD150C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1822A9CAB900CD150C /* Router.swift */; };
 		8E751A1B22A9CD8200CD150C /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1A22A9CD8200CD150C /* StoryboardIdentifiable.swift */; };
 		8E751A1D22A9CD9300CD150C /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */; };
+		8E751A2022A9E2D400CD150C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A1F22A9E2D400CD150C /* Strings.swift */; };
+		8E751A2222AA352900CD150C /* CVSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2122AA352900CD150C /* CVSectionModel.swift */; };
+		8E751A2422AA398A00CD150C /* UIApplication+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2322AA398A00CD150C /* UIApplication+Utils.swift */; };
+		8E751A2622AA6BF800CD150C /* CVTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2522AA6BF800CD150C /* CVTableViewCells.swift */; };
+		8E751A2A22AA6D3500CD150C /* CVTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2922AA6D3500CD150C /* CVTableHeaderView.swift */; };
+		8E751A2C22AAD21C00CD150C /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E751A2B22AAD21C00CD150C /* UITableView+Reusable.swift */; };
 		8E8A92EA22A9161600F22D93 /* incorrect_cv.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A92E922A9161600F22D93 /* incorrect_cv.json */; };
 		8E8A92EC22A9213C00F22D93 /* CVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92EB22A9213C00F22D93 /* CVService.swift */; };
 		8E8A92EE22A921D600F22D93 /* APIRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */; };
@@ -67,6 +73,12 @@
 		8E751A1822A9CAB900CD150C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8E751A1A22A9CD8200CD150C /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Helpers.swift"; sourceTree = "<group>"; };
+		8E751A1F22A9E2D400CD150C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		8E751A2122AA352900CD150C /* CVSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSectionModel.swift; sourceTree = "<group>"; };
+		8E751A2322AA398A00CD150C /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
+		8E751A2522AA6BF800CD150C /* CVTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCells.swift; sourceTree = "<group>"; };
+		8E751A2922AA6D3500CD150C /* CVTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableHeaderView.swift; sourceTree = "<group>"; };
+		8E751A2B22AAD21C00CD150C /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		8E8A92E922A9161600F22D93 /* incorrect_cv.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = incorrect_cv.json; sourceTree = "<group>"; };
 		8E8A92EB22A9213C00F22D93 /* CVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVService.swift; sourceTree = "<group>"; };
 		8E8A92ED22A921D600F22D93 /* APIRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestRetrier.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 			children = (
 				8E3CA83F22A8EF6E002A69F9 /* AppDelegate.swift */,
 				8E3CA84B22A8EF70002A69F9 /* Info.plist */,
+				8E751A1F22A9E2D400CD150C /* Strings.swift */,
 				8E3CA85222A8EFCF002A69F9 /* Model */,
 				8E3CA85122A8EFC4002A69F9 /* Networking */,
 				8E751A0522A9B9F900CD150C /* Persistence */,
@@ -210,9 +223,8 @@
 		8E751A1122A9CA9400CD150C /* CV */ = {
 			isa = PBXGroup;
 			children = (
-				8E751A1222A9CAA200CD150C /* CVViewController.swift */,
-				8E751A1422A9CAAA00CD150C /* CVViewModel.swift */,
-				8E3CA84322A8EF6E002A69F9 /* CV.storyboard */,
+				8E751A2822AA6CA500CD150C /* View */,
+				8E751A2722AA6C9B00CD150C /* ViewModel */,
 			);
 			path = CV;
 			sourceTree = "<group>";
@@ -226,6 +238,26 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8E751A2722AA6C9B00CD150C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A1422A9CAAA00CD150C /* CVViewModel.swift */,
+				8E751A2122AA352900CD150C /* CVSectionModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8E751A2822AA6CA500CD150C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E751A1222A9CAA200CD150C /* CVViewController.swift */,
+				8E751A2922AA6D3500CD150C /* CVTableHeaderView.swift */,
+				8E751A2522AA6BF800CD150C /* CVTableViewCells.swift */,
+				8E3CA84322A8EF6E002A69F9 /* CV.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8E8A92EF22A923E000F22D93 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +265,8 @@
 				8E751A0C22A9C63500CD150C /* JSONDecoder+Helpers.swift */,
 				8E751A1A22A9CD8200CD150C /* StoryboardIdentifiable.swift */,
 				8E751A1C22A9CD9300CD150C /* UIStoryboard+Helpers.swift */,
+				8E751A2322AA398A00CD150C /* UIApplication+Utils.swift */,
+				8E751A2B22AAD21C00CD150C /* UITableView+Reusable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -425,8 +459,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E751A2422AA398A00CD150C /* UIApplication+Utils.swift in Sources */,
 				8E751A1322A9CAA200CD150C /* CVViewController.swift in Sources */,
+				8E751A2622AA6BF800CD150C /* CVTableViewCells.swift in Sources */,
 				8E751A0B22A9C59C00CD150C /* FileStorage.swift in Sources */,
+				8E751A2022A9E2D400CD150C /* Strings.swift in Sources */,
 				8E751A0F22A9C7FA00CD150C /* SessionManager+Observable.swift in Sources */,
 				8E8A92EE22A921D600F22D93 /* APIRequestRetrier.swift in Sources */,
 				8E3CA85422A8EFE0002A69F9 /* CVModel.swift in Sources */,
@@ -435,11 +472,14 @@
 				8E3CA84022A8EF6E002A69F9 /* AppDelegate.swift in Sources */,
 				8E751A1522A9CAAA00CD150C /* CVViewModel.swift in Sources */,
 				8E751A1D22A9CD9300CD150C /* UIStoryboard+Helpers.swift in Sources */,
+				8E751A2C22AAD21C00CD150C /* UITableView+Reusable.swift in Sources */,
 				8E751A1922A9CAB900CD150C /* Router.swift in Sources */,
 				8E751A0922A9C58800CD150C /* StorageProtocol.swift in Sources */,
 				8E8A92EC22A9213C00F22D93 /* CVService.swift in Sources */,
 				8E751A1722A9CAB300CD150C /* SceneAssembly.swift in Sources */,
 				8E751A1B22A9CD8200CD150C /* StoryboardIdentifiable.swift in Sources */,
+				8E751A2222AA352900CD150C /* CVSectionModel.swift in Sources */,
+				8E751A2A22AA6D3500CD150C /* CVTableHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
